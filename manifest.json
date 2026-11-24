@@ -1,0 +1,11 @@
+{
+  "name": "RAJU BOOK & STATIONERY",
+  "short_name": "Raju Stationery",
+  "description": "Offline stock, purchase, sales and business management",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6fb",
+  "theme_color": "#142b4a",
+  "icons": [{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
