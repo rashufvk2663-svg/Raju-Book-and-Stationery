@@ -136,4 +136,7 @@ async function updateDashboard() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", updateDashboard);
+document.addEventListener("DOMContentLoaded", async () => {
+  await RajuApp.init();
+  await updateDashboard();
+});
