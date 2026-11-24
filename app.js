@@ -95,4 +95,4 @@ const RajuApp = {
 
 window.RajuApp = RajuApp;
 
-RajuApp.init();
+
