@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#142b4a">
+<title>Raju Book and Stationery</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f3f6fb;color:#1d2939}
+header{background:#142b4a;color:white;padding:22px 17px}
+header h2{font-size:21px}
+header p{font-size:12px;margin-top:6px;color:#cbd8e8}
+.container{padding:16px;max-width:850px;margin:auto}
+.heading{font-size:18px;font-weight:bold;margin:18px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.card{background:white;padding:17px;border-radius:13px;box-shadow:0 2px 9px #172b4a10}
+.card small{color:#667085}
+.card h2{font-size:23px;margin-top:9px;color:#173d69}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.menu button{background:white;border:1px solid #e3e8ef;border-radius:12px;padding:17px 10px;text-align:left;font-size:14px;font-weight:bold;color:#173d69;min-height:75px}
+.menu button span{display:block;font-size:22px;margin-bottom:8px}
+button{cursor:pointer}
+.alert{background:#fff4e5;color:#995500;padding:13px;border-radius:10px;margin-top:15px;font-size:13px}
+footer{text-align:center;padding:25px;color:#8993a2;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+<h2>RAJU BOOK & STATIONERY</h2>
+<p>Offline Business Management System</p>
+</header>
+<main class="container">
+<div class="heading">Business Dashboard</div>
+<div class="grid">
+<div class="card"><small>Total Products</small><h2 id="products">0</h2></div>
+<div class="card"><small>Current Stock</small><h2 id="stock">0</h2></div>
+<div class="card"><small>Today's Sales</small><h2 id="sales">₹0</h2></div>
+<div class="card"><small>Today's Profit</small><h2 id="profit">₹0</h2></div>
+</div>
+<div class="heading">Management Menu</div>
+<div class="menu">
+<button onclick="openPage('stock')"><span>📦</span>Stock Update</button>
+<button onclick="openPage('purchase')"><span>🛒</span>Purchase</button>
+<button onclick="openPage('salespage')"><span>🧾</span>Sales</button>
+<button onclick="openPage('reports')"><span>📊</span>Reports</button>
+<button onclick="openPage('alerts')"><span>🔔</span>Stock Alerts</button>
+<button onclick="openPage('settings')"><span>⚙️</span>Settings</button>
+</div>
+<div class="alert">Welcome! Your business management system is ready for setup.</div>
+<section id="page" style="margin-top:18px"></section>
+</main>
+<footer>Raju Book and Stationery<br>Offline Management System</footer>
+<script>
+const pages={
+stock:"Stock Update",
+purchase:"Purchase Management",
+salespage:"Sales Management",
+reports:"Weekly & Monthly Reports",
+alerts:"Low Stock Alerts",
+settings:"App Settings"
+};
+function openPage(name){
+document.getElementById("page").innerHTML=
+'<div class="card"><h3>'+pages[name]+'</h3><p style="margin-top:12px;color:#667085">This module will be added in the next development step.</p></div>';
+}
+</script>
+</body>
+</html>
